@@ -86,7 +86,6 @@ const ServicesSection: FC = () => {
           <ServiceCard
             key={service.id}
             title={service.title}
-            description={service.description}
             imageSrc={service.iconSrc || service.imageSrc}
           />
         ))}

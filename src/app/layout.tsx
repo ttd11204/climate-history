@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='container mx-auto max-w-6xl px-10'>{children}</body>
+      <body className=''>{children}</body>
     </html>
   );
 }

@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import StorySection from '@/components/StorySection';
-import Chapter from '@/components/Chapter2';
-import ExhibitionsSection from '@/components/ExhibitionsSection';
-import ServicesSection from '@/components/ServicesSection';
+import MainContent from '@/components/MainContent';
+import Definition from '@/components/definition/Chapter2';
+import ImpactsSection from '@/components/impact/ExhibitionsSection';
+import SocialLifeSection from '@/components/social-life/SocialLifeSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,12 +38,12 @@ const StoryPage = () => {
 
   return (
     <div ref={containerRef} className='space-y-24 p-10 bg-[#faf9f5] '>
-      <StorySection title='Chương 1' content='Bắt đầu cuộc hành trình...' />
-      <StorySection title='Chương 2' content='Vượt qua rừng sâu...' />
-      <Chapter />
-      <ExhibitionsSection />
-      <ServicesSection />
-      <StorySection title='Chương 3' content='Chạm đến đỉnh núi...' />
+      <MainContent title='Chương 1' content='Bắt đầu cuộc hành trình...' />
+      <MainContent title='Chương 2' content='Vượt qua rừng sâu...' />
+      <Definition />
+      <ImpactsSection />
+      <SocialLifeSection />
+      <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
     </div>
   );
 };

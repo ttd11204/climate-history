@@ -1,13 +1,13 @@
 import { FC, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import ExhibitionCard from './ExhibitionCard';
+import ImpactCard from './ImpactCard';
 
-const exhibitions = [
+const impacts = [
   {
     id: 1,
     title: 'Vì sao tác động trở lại?',
-    dateRange: [
+    content: [
       'Do tính độc lập tương đối của KTTT, tính năng động, sáng tạo của ý thức, tinh thần.',
       'Do vai trò sức mạnh vật chất của bộ máy tổ chức - thể chế',
     ],
@@ -16,7 +16,7 @@ const exhibitions = [
   {
     id: 2,
     title: 'Nội dung của tác động trở lại',
-    dateRange: [
+    content: [
       'Củng cố, hoàn thiện và bảo vệ CSHT sinh ra nó, thực chất là bảo vệ lợi ích kinh tế của giai cấp',
       'Ngăn chặn CSHT mới, xóa bỏ tàn dư CSHT cũ',
       'Định hướng, tổ chức, xây dựng chế độ kinh tế',
@@ -26,7 +26,7 @@ const exhibitions = [
   {
     id: 3,
     title: 'Phương thức tác động trở lại',
-    dateRange: [
+    content: [
       'Sự tác động của KTTT đối với CSHT diễn ra theo hai chiều hướng:',
       'Nếu KTTT tác động cùng chiều với sự phát triển của cơ sở hạ tầng sẽ thúc đẩy cơ sở hạ tầng phát triển. ',
       'Nếu KTTT tác động ngược chiều với sự phát triển của cơ sở hạ tầng, của cơ cấu kinh tế thì sẽ kìm hãm sự phát triển của CSHT, kinh tế.',
@@ -35,13 +35,13 @@ const exhibitions = [
   },
 ];
 
-const ExhibitionsSection: FC = () => {
+const ImpactsSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const cards = sectionRef.current?.querySelectorAll('.exhibition-card');
+    const cards = sectionRef.current?.querySelectorAll('.impact-card');
 
     if (cards) {
       gsap.from(Array.from(cards), {
@@ -61,16 +61,16 @@ const ExhibitionsSection: FC = () => {
 
   return (
     <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-20 '>
-      {exhibitions.map((exhibition) => (
-        <ExhibitionCard
-          key={exhibition.id}
-          title={exhibition.title}
-          dateRange={exhibition.dateRange}
-          imageSrc={exhibition.imageSrc}
+      {impacts.map((impact) => (
+        <ImpactCard
+          key={impact.id}
+          title={impact.title}
+          content={impact.content}
+          imageSrc={impact.imageSrc}
         />
       ))}
     </div>
   );
 };
 
-export default ExhibitionsSection;
+export default ImpactsSection;

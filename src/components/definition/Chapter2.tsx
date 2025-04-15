@@ -1,15 +1,13 @@
 // pages/index.tsx
 import { useEffect, useRef } from 'react';
-import Head from 'next/head';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Image from 'next/image';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function Chapter() {
+export default function Definition() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const firstEventRef = useRef<HTMLDivElement>(null);
   const secondEventRef = useRef<HTMLDivElement>(null);

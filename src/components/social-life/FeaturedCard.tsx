@@ -1,15 +1,11 @@
-// components/FeaturedServiceCard.tsx
 import { FC } from 'react';
 
-interface FeaturedServiceCardProps {
+interface FeaturedCardProps {
   imageSrc: string;
   alt: string;
 }
 
-const FeaturedServiceCard: FC<FeaturedServiceCardProps> = ({
-  imageSrc,
-  alt,
-}) => {
+const FeaturedCard: FC<FeaturedCardProps> = ({ imageSrc, alt }) => {
   return (
     <div className='relative'>
       {/* Yellow border decoration */}
@@ -23,4 +19,4 @@ const FeaturedServiceCard: FC<FeaturedServiceCardProps> = ({
   );
 };
 
-export default FeaturedServiceCard;
+export default FeaturedCard;

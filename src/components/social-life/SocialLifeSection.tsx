@@ -1,9 +1,8 @@
-// components/ServicesSection.tsx
 import { FC, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import ServiceCard from './ServiceCard';
-import FeaturedServiceCard from './FeaturedServiceCard';
+import SocialLifeCard from './SocialLifeCard';
+import FeaturedCard from '@/components/social-life/FeaturedCard';
 
 // Register the ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -40,7 +39,7 @@ const services = [
   },
 ];
 
-const ServicesSection: FC = () => {
+const SocialLifeSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const featuredRef = useRef<HTMLDivElement>(null);
 
@@ -74,7 +73,7 @@ const ServicesSection: FC = () => {
     <div className='flex flex-col lg:flex-row gap-8'>
       {/* Featured Service - Left Side */}
       <div ref={featuredRef} className='lg:w-2/5'>
-        <FeaturedServiceCard
+        <FeaturedCard
           imageSrc='/philosophy.jpg'
           alt='Gallery visitor looking at exhibitions'
         />
@@ -83,7 +82,7 @@ const ServicesSection: FC = () => {
       {/* Service Cards - Right Side */}
       <div ref={sectionRef} className='lg:w-3/5 grid grid-cols-1  gap-6'>
         {services.map((service) => (
-          <ServiceCard
+          <SocialLifeCard
             key={service.id}
             title={service.title}
             imageSrc={service.iconSrc || service.imageSrc}
@@ -94,4 +93,4 @@ const ServicesSection: FC = () => {
   );
 };
 
-export default ServicesSection;
+export default SocialLifeSection;

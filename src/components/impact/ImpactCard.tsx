@@ -3,15 +3,11 @@ import { FC } from 'react';
 
 interface ExhibitionCardProps {
   title: string;
-  dateRange: string[];
+  content: string[];
   imageSrc: string;
 }
 
-const ExhibitionCard: FC<ExhibitionCardProps> = ({
-  title,
-  dateRange,
-  imageSrc,
-}) => {
+const ImpactCard: FC<ExhibitionCardProps> = ({ title, content, imageSrc }) => {
   return (
     <div className='exhibition-card group relative  hover:shadow-md transition-shadow duration-300 shadow-custom overflow-hidden'>
       {/* Yellow triangle decoration */}
@@ -27,7 +23,7 @@ const ExhibitionCard: FC<ExhibitionCardProps> = ({
         <h2 className='text-2xl text-center mb-2'>{title}</h2>
         {/* Hiển thị các dòng dateRange */}
         <ul className='text-gray-600 text-left list-disc list-inside space-y-1'>
-          {dateRange.map((item, index) => (
+          {content.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
@@ -36,4 +32,4 @@ const ExhibitionCard: FC<ExhibitionCardProps> = ({
   );
 };
 
-export default ExhibitionCard;
+export default ImpactCard;

@@ -1,13 +1,12 @@
-// components/ServiceCard.tsx
 import { FC } from 'react';
 
-interface ServiceCardProps {
+interface SocialLifeProps {
   title: string;
   description?: string;
   imageSrc: string;
 }
 
-const ServiceCard: FC<ServiceCardProps> = ({
+const SocialLifeCard: FC<SocialLifeProps> = ({
   title,
   description,
   imageSrc,
@@ -32,4 +31,4 @@ const ServiceCard: FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard;
+export default SocialLifeCard;

@@ -12,8 +12,29 @@ import Header from '@/components/header/Header';
 import Hero from '@/components/header/Hero';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 import { SparklesPreview } from '@/components/sparkles/Sparkles';
+import { SVGMaskEffectDemo } from '@/components/open-question/SVGMaskEffect';
+import Timeline from '@/components/timeline/Timeline';
 
 gsap.registerPlugin(ScrollTrigger);
+const timelineEvents = [
+  {
+    id: 1,
+    number: '01',
+    date: `Khái niệm về cơ sở hạ tầng và
+     kiến trúc thượng tầng`,
+  },
+  {
+    id: 2,
+    number: '02',
+    date: `Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và
+    kiến trúc thượng tầng`,
+  },
+  {
+    id: 3,
+    number: '03',
+    date: 'Giải quyết vấn đề',
+  },
+];
 
 const StoryPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,19 +66,21 @@ const StoryPage = () => {
     <>
       <Header />
       <Hero />
+      <div ref={containerRef} className=' '>
+        <SVGMaskEffectDemo />
+        <hr className='' />
+        <Timeline events={timelineEvents} />
+        {/* <TracingBeamDemo /> */}
+        <TracingBeam className='bg-[#f9f4e8] text-[#3c2f2f]'>
+          <div className='space-y-24 p-10  container mx-auto'>
+            <Definition />
+            <ImpactsSection />
+            <SocialLifeSection />
+            <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
+          </div>
+        </TracingBeam>
+      </div>
       <SparklesPreview />
-      {/* <TracingBeamDemo /> */}
-      <TracingBeam className='bg-[#f9f4e8] text-[#3c2f2f]'>
-        <div
-          ref={containerRef}
-          className='space-y-24 p-10 bg-[#faf9f5] container mx-auto'
-        >
-          <Definition />
-          <ImpactsSection />
-          <SocialLifeSection />
-          <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
-        </div>
-      </TracingBeam>
     </>
   );
 };

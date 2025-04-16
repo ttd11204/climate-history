@@ -60,16 +60,23 @@ const ImpactsSection: FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-20 '>
-      {impacts.map((impact) => (
-        <ImpactCard
-          key={impact.id}
-          title={impact.title}
-          content={impact.content}
-          imageSrc={impact.imageSrc}
-        />
-      ))}
-    </div>
+    <>
+      <div className='text-center mb-16'>
+        <h1 className='text-4xl font-bold'>
+          Khái niệm về cơ sở hạ tầng và kiến trúc thượng tầng
+        </h1>
+      </div>
+      <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-20 '>
+        {impacts.map((impact) => (
+          <ImpactCard
+            key={impact.id}
+            title={impact.title}
+            content={impact.content}
+            imageSrc={impact.imageSrc}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

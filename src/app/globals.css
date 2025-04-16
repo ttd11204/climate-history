@@ -10,7 +10,7 @@
 :root {
   --primary-text: #000;
   --secondary-text: #ab332b;
-  --background-rgb: #faf9f5;
+  --background-rgb: #faf4e9;
 }
 
 html {
@@ -82,14 +82,6 @@ body {
   .font-bold {
     color: #ab332b;
   }
-}
-
-.plus-symbols {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-  color: #e5e7eb;
-  font-size: 1rem;
 }
 
 @layer utilities {

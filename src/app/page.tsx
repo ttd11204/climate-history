@@ -47,7 +47,15 @@ const services = [
 const content = `Cơ sở hạ tầng và kiến trúc thượng tầng là hai mặt cơ bản của xã hội, tác động biện chứng, trong đó cơ sở hạ tầng quyết định kiến trúc thượng tầng còn kiến trúc thượng tầng tác động trở lại to lớn, mạnh mẽ đối với cơ sở hạ tầng.`;
 
 const data = [
-  { title: 'Khái niệm', content: <Definition /> },
+  {
+    title: 'Khái niệm',
+    content: (
+      <div>
+        {' '}
+        <Definition />
+      </div>
+    ),
+  },
   {
     title: `Quan hệ
     biện chứng`,
@@ -65,7 +73,12 @@ const data = [
   },
   {
     title: 'Vấn đề',
-    content: <BentoGridDemo />,
+    content: (
+      <div>
+        {/* <TimelineDemo /> */}
+        <BentoGridDemo />{' '}
+      </div>
+    ),
   },
 ];
 

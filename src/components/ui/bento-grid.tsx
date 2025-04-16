@@ -40,10 +40,10 @@ export const BentoGridItem = ({
       {/* {header && <div>{header}</div>} */}
       <div className='flex flex-col gap-5 transition-all duration-300 group-hover/bento:translate-x-1.5'>
         {/* {icon && <div className='text-4xl'>{icon}</div>} */}
-        <div className='text-3xl font-bold text-orange-700 underline underline-offset-4'>
+        <div className='text-2xl font-bold text-orange-700 underline underline-offset-4'>
           {title}
         </div>
-        <div className='text-xl text-gray-700 leading-relaxed whitespace-pre-wrap'>
+        <div className='text-gray-700 leading-relaxed whitespace-pre-wrap'>
           {description}
         </div>
       </div>

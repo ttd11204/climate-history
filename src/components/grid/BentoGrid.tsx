@@ -10,7 +10,7 @@ import {
 
 export function BentoGridDemo() {
   return (
-    <>
+    <div className='mb-20'>
       <div className='text-center mb-16'>
         <h1 className='text-4xl font-bold'>
           Giải quyết vấn đề đặt ra ở đầu bài
@@ -28,7 +28,7 @@ export function BentoGridDemo() {
           />
         ))}
       </BentoGrid>
-    </>
+    </div>
   );
 }
 

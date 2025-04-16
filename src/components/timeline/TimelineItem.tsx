@@ -63,7 +63,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         <p className='text-gray-600 mt-2'>{content}</p>
       </div>
 
-      <div className='z-10 flex items-center justify-center bg-amber-500 text-white rounded-full w-16 h-16'>
+      <div className='z-10 flex items-center justify-center bg-[#ab332b] text-white rounded-full w-16 h-16'>
         <span className='text-2xl font-semibold'>{number}</span>
       </div>
 

@@ -60,10 +60,10 @@ const ImpactsSection: FC = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div className='text-center mb-16'>
         <h1 className='text-4xl font-bold'>
-          Khái niệm về cơ sở hạ tầng và kiến trúc thượng tầng
+          Sự tác động trở lại của kiến trúc thượng tầng đối với cơ sở hạ tầng
         </h1>
       </div>
       <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-20 '>
@@ -76,7 +76,7 @@ const ImpactsSection: FC = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

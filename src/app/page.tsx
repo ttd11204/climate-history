@@ -13,9 +13,62 @@ import Hero from '@/components/header/Hero';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 import { SparklesPreview } from '@/components/sparkles/Sparkles';
 import { SVGMaskEffectDemo } from '@/components/open-question/SVGMaskEffect';
-import Timeline from '@/components/timeline/Timeline';
+import TimelineMenu from '@/components/timeline/Timeline';
+import { TimelineDemo } from '@/components/side-timeline/SideTimeline';
+import { title } from 'process';
+import { Timeline } from '@/components/ui/timeline';
+import { StickyScrollRevealDemo } from '@/components/sticky-scroll/StickyScrollReveal';
+import RelationshipShowcase from '@/components/relationship/RealtionshipShowcase';
+import { BentoGridDemo } from '@/components/grid/BentoGrid';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+  {
+    id: 1,
+    icon: 'database',
+    title:
+      'Mỗi kiểu quan hệ sản xuất nhất định sẽ hình thành nên một kiến trúc thượng tầng tương ứng.',
+  },
+  {
+    id: 2,
+    icon: 'thumbs-up',
+    title:
+      'Khi quan hệ sản xuất cũ lỗi thời, bị thay thế bởi quan hệ sản xuất mới, thì kiến trúc thượng tầng cũng phải thay đổi theo để phù hợp.',
+  },
+  {
+    id: 3,
+    icon: 'lightbulb',
+    title:
+      'CSHT là nền tảng vật chất để KTTT hình thành và phát triển, không thể tồn tại một hình thức nhà nước, pháp luật, tư tưởng… tách rời hoặc đi ngược lại hoàn toàn với nền tảng kinh tế của xã hội.',
+  },
+];
+
+const content = `Cơ sở hạ tầng và kiến trúc thượng tầng là hai mặt cơ bản của xã hội, tác động biện chứng, trong đó cơ sở hạ tầng quyết định kiến trúc thượng tầng còn kiến trúc thượng tầng tác động trở lại to lớn, mạnh mẽ đối với cơ sở hạ tầng.`;
+
+const data = [
+  { title: 'Khái niệm', content: <Definition /> },
+  {
+    title: `Quan hệ
+    biện chứng`,
+    content: (
+      <div className='space-y-24'>
+        <RelationshipShowcase
+          relationship={services}
+          content={content}
+          imageUrl='/relationship/relationship.jpg'
+        />
+        <ImpactsSection />
+        <SocialLifeSection />
+      </div>
+    ),
+  },
+  {
+    title: 'Vấn đề',
+    content: <BentoGridDemo />,
+  },
+];
+
 const timelineEvents = [
   {
     id: 1,
@@ -66,19 +119,14 @@ const StoryPage = () => {
     <>
       <Header />
       <Hero />
-      <div ref={containerRef} className=' '>
+      <div ref={containerRef}>
         <SVGMaskEffectDemo />
-        <hr className='' />
-        <Timeline events={timelineEvents} />
-        {/* <TracingBeamDemo /> */}
-        <TracingBeam className='bg-[#f9f4e8] text-[#3c2f2f]'>
-          <div className='space-y-24 p-10  container mx-auto'>
-            <Definition />
-            <ImpactsSection />
-            <SocialLifeSection />
-            <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
-          </div>
-        </TracingBeam>
+        <hr className='w-1/2 mx-auto my-8 border-t-4 border-[#ab332b]' />
+        <TimelineMenu events={timelineEvents} />
+        <div className='relative w-full overflow-clip '>
+          <Timeline data={data} />
+        </div>
+        <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
       </div>
       <SparklesPreview />
     </>

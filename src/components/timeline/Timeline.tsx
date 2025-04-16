@@ -14,7 +14,7 @@ interface TimelineProps {
   events: TimelineEvent[];
 }
 
-const Timeline: React.FC<TimelineProps> = ({ events }) => {
+const TimelineMenu: React.FC<TimelineProps> = ({ events }) => {
   const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,10 +28,10 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
   }, []);
 
   return (
-    <div ref={timelineRef} className='container mx-auto p-10 py-16 max-w-6xl'>
+    <div ref={timelineRef} className='container mx-auto py-16 max-w-6xl'>
       <div className='mb-16'>
         <h2 className='timeline-title text-4xl font-bold text-gray-800 mb-2'>
-          <span className='text-amber-500 mr-2'>○</span>
+          <span className=' mr-2'>○</span>
           NỘI DUNG CHÍNH
         </h2>
       </div>
@@ -45,7 +45,6 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
             key={event.id}
             number={event.number}
             date={event.date}
-            // content={event.content}
             position={index % 2 === 0 ? 'right' : 'left'}
             index={index}
           />
@@ -55,4 +54,4 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
   );
 };
 
-export default Timeline;
+export default TimelineMenu;

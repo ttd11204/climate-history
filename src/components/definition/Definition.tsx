@@ -23,8 +23,7 @@ export default function Definition() {
           // autoplay
           content={{
             title: 'Cơ sở hạ tầng',
-            content:
-              'Toàn bộ những quan hệ sản xuất hợp thành cấu trúc kinh tế của một xã hội, là nền tảng kinh tế của xã hội đó. Nó quyết định đến tính chất và sự vận động, phát triển của toàn bộ xã hội.',
+            content: `  Toàn bộ những quan hệ sản xuất hợp thành cấu trúc kinh tế của một xã hội, là nền tảng kinh tế của xã hội đó. Nó quyết định đến tính chất và sự vận động, phát triển của toàn bộ xã hội. Mỗi quan hệ sản xuất có một vị trí, vai trò khác nhau. Trong đó quan hệ sản xuất thống trị đặc trưng cho cơ sở hạ tầng của xã hội đó.`,
           }}
           images={[
             {
@@ -47,8 +46,7 @@ export default function Definition() {
           // autoplay
           content={{
             title: 'Kiến trúc thượng tầng',
-            content:
-              'Toàn bộ những tư tưởng xã hội với những thiết chế xã hội tương ứng cùng những quan hệ nội tại của thượng tầng hình thành trên một cơ sở hạ tầng nhất định.',
+            content: ` Toàn bộ những tư tưởng xã hội với những thiết chế xã hội tương ứng cùng những quan hệ nội tại của thượng tầng hình thành trên một cơ sở hạ tầng nhất định. Bộ phận có quyền lực mạnh nhất trong kiến trúc thượng tầng của xã hội có đối kháng giai cấp là nhà nước - công cụ quyền lực chính trị đặc biệt của giai cấp thống trị`,
           }}
           images={[
             {

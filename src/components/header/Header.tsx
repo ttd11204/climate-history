@@ -2,16 +2,8 @@
 import { FC, useState } from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
-import LanguageSelector from './LanguageSelector';
-import NavMenu from './NavMenu';
 
 const Header: FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
   return (
     <header className='absolute top-0 left-0 right-0 z-50'>
       <div className='container mx-auto px-4 py-6'>
@@ -24,18 +16,18 @@ const Header: FC = () => {
           </div>
 
           {/* Language Selector (Mobile + Desktop) */}
-          <div className='flex md:hidden'>
+          {/* <div className='flex md:hidden'>
             <LanguageSelector />
-          </div>
+          </div> */}
 
           {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>
+          {/* <div className='hidden md:flex items-center space-x-8'>
             <LanguageSelector />
             <NavMenu />
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
-          <button
+          {/* <button
             className='md:hidden text-white'
             onClick={toggleMobileMenu}
             aria-label='Toggle menu'
@@ -58,16 +50,16 @@ const Header: FC = () => {
                 }
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
+      {/* {mobileMenuOpen && (
         <div className='md:hidden bg-black bg-opacity-95 absolute top-full left-0 right-0 p-4'>
           <NavMenu isMobile={true} />
         </div>
-      )}
+      )} */}
     </header>
   );
 };

@@ -4,11 +4,7 @@ import React from 'react';
 import { ImagesSlider } from '../ui/images-slider';
 
 export function ImagesSliderDemo() {
-  const images = [
-    '/hero/hero-1.jpg',
-    // '/hero/hero-2.jpg',
-    'https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  ];
+  const images = ['/hero/hero-1.jpg', '/hero/hero-2.jpg', '/hero/hero-3.jpg'];
   return (
     <ImagesSlider
       className='w-full h-full object-cover opacity-70'

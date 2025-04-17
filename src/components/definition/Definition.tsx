@@ -28,16 +28,16 @@ export default function Definition() {
           }}
           images={[
             {
-              src: '/csht/csht-1.jpg',
+              src: '/csht/csht.jpg',
             },
             {
-              src: '/csht/csht-2.jpg',
+              src: '/csht/tan-du.jpg',
             },
             {
-              src: '/csht/csht-3.jpg',
+              src: '/csht/thong-tri.jpg',
             },
             {
-              src: '/csht/csht-4.jpg',
+              src: '/csht/mam-mong.jpg',
             },
           ]}
         />
@@ -52,13 +52,13 @@ export default function Definition() {
           }}
           images={[
             {
-              src: '/kttt/kttt-1.jpg',
+              src: '/kttt/kttt.jpg',
             },
             {
-              src: '/kttt/kttt-2.jpg',
+              src: '/kttt/tcxh.jpg',
             },
             {
-              src: '/kttt/kttt-3.jpg',
+              src: '/kttt/htttxh.jpg',
             },
           ]}
         />

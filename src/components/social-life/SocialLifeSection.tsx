@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SocialLifeCard from './SocialLifeCard';
 import FeaturedCard from '@/components/social-life/FeaturedCard';
+import { Lightbulb, Sparkles, Clover, Gift } from 'lucide-react';
 
 // Register the ScrollTrigger plugin
 if (typeof window !== 'undefined') {
@@ -17,6 +18,7 @@ const services = [
     imageSrc: '/philosophy.jpg',
     iconSrc: '/philosophy.jpg',
     featured: false,
+    icon: <Lightbulb size={32} />,
   },
   {
     id: 2,
@@ -24,18 +26,21 @@ const services = [
       'Trong quá trình lãnh đạo cách mạng Việt Nam, Đảng ta đã rất quan tâm đến nhận thức và vận dụng quy luật này',
     imageSrc: '/philosophy.jpg',
     featured: false,
+    icon: <Sparkles size={32} />,
   },
   {
     id: 3,
     title: 'Đổi mới toàn diện cả kinh tế và chính trị',
     imageSrc: '/philosophy.jpg',
     featured: false,
+    icon: <Clover size={32} />,
   },
   {
     id: 4,
     title: 'Giải quyết tốt mối quan hệ giữa đổi mới - ổn định - phát triển',
     imageSrc: '/philosophy.jpg',
     featured: false,
+    icon: <Gift size={32} />,
   },
 ];
 
@@ -86,6 +91,7 @@ const SocialLifeSection: FC = () => {
             key={service.id}
             title={service.title}
             imageSrc={service.iconSrc || service.imageSrc}
+            icon={service.icon}
           />
         ))}
       </div>

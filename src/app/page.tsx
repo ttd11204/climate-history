@@ -75,7 +75,6 @@ const data = [
     title: 'Vấn đề',
     content: (
       <div>
-        {/* <TimelineDemo /> */}
         <BentoGridDemo />{' '}
       </div>
     ),
@@ -139,7 +138,6 @@ const StoryPage = () => {
         <div className='relative w-full overflow-clip '>
           <Timeline data={data} />
         </div>
-        <MainContent title='Chương 3' content='Chạm đến đỉnh núi...' />
       </div>
       <SparklesPreview />
     </>

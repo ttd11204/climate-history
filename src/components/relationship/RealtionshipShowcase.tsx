@@ -104,11 +104,11 @@ const RelationshipShowcase: React.FC<RelationshipShowcaseProps> = ({
         <div ref={titleRef} className='w-full lg:w-1/4 mt-10 lg:mt-0'>
           <div className='flex items-center'>
             <div className='w-3 h-3 rounded-full bg-amber-500 mr-2'></div>
-            <h2 className='text-3xl lg:text-4xl font-bold text-[#ab332b]'>
+            <h2 className='text-2xl font-bold text-[#ab332b]'>
               Vai trò quyết định của
             </h2>
           </div>
-          <h2 className='text-3xl lg:text-4xl font-bold text-[#ab332b] ml-5'>
+          <h2 className='text-2xl font-bold text-[#ab332b] ml-5'>
             CSHT đối với KTTT.
           </h2>
         </div>

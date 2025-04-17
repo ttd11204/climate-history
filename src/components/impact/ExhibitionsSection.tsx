@@ -11,7 +11,7 @@ const impacts = [
       'Do tính độc lập tương đối của KTTT, tính năng động, sáng tạo của ý thức, tinh thần.',
       'Do vai trò sức mạnh vật chất của bộ máy tổ chức - thể chế',
     ],
-    imageSrc: '/philosophy.jpg',
+    imageSrc: '/impact/info.jpg',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const impacts = [
       'Ngăn chặn CSHT mới, xóa bỏ tàn dư CSHT cũ',
       'Định hướng, tổ chức, xây dựng chế độ kinh tế',
     ],
-    imageSrc: '/philosophy.jpg',
+    imageSrc: '/impact/question.jpg',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const impacts = [
       'Nếu KTTT tác động cùng chiều với sự phát triển của cơ sở hạ tầng sẽ thúc đẩy cơ sở hạ tầng phát triển. ',
       'Nếu KTTT tác động ngược chiều với sự phát triển của cơ sở hạ tầng, của cơ cấu kinh tế thì sẽ kìm hãm sự phát triển của CSHT, kinh tế.',
     ],
-    imageSrc: '/philosophy.jpg',
+    imageSrc: '/impact/rotate.jpg',
   },
 ];
 
@@ -66,7 +66,7 @@ const ImpactsSection: FC = () => {
           Sự tác động trở lại của kiến trúc thượng tầng đối với cơ sở hạ tầng
         </h1>
       </div>
-      <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-20 '>
+      <div ref={sectionRef} className='grid grid-cols-1 md:grid-cols-3 gap-16 '>
         {impacts.map((impact) => (
           <ImpactCard
             key={impact.id}

@@ -19,9 +19,16 @@ html {
 
 body {
   color: var(--primary-text);
-  background: var(--background-rgb);
+  /* --background-rgb: #faf4e9; */
   font-family: 'EB Garamond', serif;
-  /* zoom: 90%; */
+  background-image: linear-gradient(
+      rgba(250, 244, 233, 0.7),
+      rgba(250, 244, 233, 0.7)
+    ),
+    url('/bg_cleanup.jpg'); /* Đường dẫn đến hình ảnh */
+  background-repeat: repeat; /* Lặp lại hình ảnh */
+  background-size: contain;
+  background-position: center;
 }
 
 ::-webkit-scrollbar {

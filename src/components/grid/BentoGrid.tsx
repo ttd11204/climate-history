@@ -75,10 +75,8 @@ const items = [
     icon: <IconTableColumn className='h-8 w-8 text-orange-500' />,
   },
   {
-    title: 'Tính định hướng của chính trị đối với kinh tế',
-    description: `Chính trị xác định mục tiêu phát triển kinh tế là để phục vụ cho kháng chiến
-Kinh tế đóng vai trò công cụ, còn chính trị là kim chỉ nam dẫn dắt toàn bộ hoạt động xã hội trong thời chiến.
-`,
+    // title: 'Tính định hướng của chính trị đối với kinh tế',
+    description: <img src='/co.jpg' alt='relationship' />,
     header: <Skeleton />,
     icon: <IconArrowWaveRightUp className='h-8 w-8 text-orange-500' />,
   },

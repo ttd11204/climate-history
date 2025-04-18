@@ -10,14 +10,10 @@ import SocialLifeSection from '@/components/social-life/SocialLifeSection';
 import Definition from '@/components/definition/Definition';
 import Header from '@/components/header/Header';
 import Hero from '@/components/header/Hero';
-import { TracingBeam } from '@/components/ui/tracing-beam';
 import { SparklesPreview } from '@/components/sparkles/Sparkles';
 import { SVGMaskEffectDemo } from '@/components/open-question/SVGMaskEffect';
 import TimelineMenu from '@/components/timeline/Timeline';
-import { TimelineDemo } from '@/components/side-timeline/SideTimeline';
-import { title } from 'process';
 import { Timeline } from '@/components/ui/timeline';
-import { StickyScrollRevealDemo } from '@/components/sticky-scroll/StickyScrollReveal';
 import RelationshipShowcase from '@/components/relationship/RealtionshipShowcase';
 import { BentoGridDemo } from '@/components/grid/BentoGrid';
 
@@ -135,7 +131,7 @@ const StoryPage = () => {
         <SVGMaskEffectDemo />
         <hr className='w-1/2 mx-auto my-8 border-t-4 border-[#ab332b]' />
         <TimelineMenu events={timelineEvents} />
-        <div className='relative w-full overflow-clip '>
+        <div className='relative w-full overflow-clip mb-10 pb-1'>
           <Timeline data={data} />
         </div>
       </div>

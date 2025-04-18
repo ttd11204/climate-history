@@ -7,6 +7,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from '@tabler/icons-react';
+import OpenQuestion from '@/components/open-question/OpenQuestion';
 
 export function BentoGridDemo() {
   return (
@@ -28,6 +29,8 @@ export function BentoGridDemo() {
           />
         ))}
       </BentoGrid>
+
+      <OpenQuestion />
     </div>
   );
 }
